@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>Compar'Immo Mandaryne V1</title>
-</head>
-<body>
-  <h1>Compar'Immo Mandaryne V1</h1>
-  <p>Le site est en cours de déploiement.</p>
-</body>
-</html>
+import Hero from "../components/Hero";
+import FormulaireBien from "../components/FormulaireBien";
+import Comparables from "../components/Comparables";
+import SourcesSection from "../components/SourcesSection";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-white text-slate-900">
+      <div className="mx-auto max-w-7xl p-6 space-y-6">
+        <Hero />
+
+        <div className="grid gap-6 lg:grid-cols-[420px_1fr]">
+          <FormulaireBien />
+
+          <div className="space-y-6">
+            <SourcesSection />
+            <Comparables />
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
